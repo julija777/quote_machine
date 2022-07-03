@@ -1,4 +1,4 @@
-# QuoteMachine
+# quote_machine project
 freeCodeCamp Front End Development Libraries Projects
 
 ## Task for the project is:

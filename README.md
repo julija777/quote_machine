@@ -1,7 +1,7 @@
 # QuoteMachine
 freeCodeCamp Front End Development Libraries Projects
 
-##Task for the project is:
+## Task for the project is:
 
 Fulfill the below user stories and get all of the tests to pass. Use whichever libraries or APIs you need. Give it your own personal style.
 

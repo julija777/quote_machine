@@ -1,11 +1,23 @@
-import './App.scss';
 import React, {useState} from 'react'
+import './App.scss';
 
 
 
 function App() {
-    let quote = "bla bla bla dummy quote";
-    let author = "Smart Dummy Author"; 
+  const [quote, setQuote] = useState("bla bla bla this is a quote")
+  const [author, setAuthor] = useState("Smart Fake Author")
+
+  const changeQuote = () => {
+    fetch("https://api.quotable.io/random")
+    .then(res => res.json())
+    .then(data => {
+      setQuote(data.content)
+      setAuthor(data.author)
+    })
+  }
+  
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -15,6 +27,7 @@ function App() {
         <p>
             - {author}
         </p>
+            <button onClick={() => changeQuote()}>Get Random Quote</button>
         </header>
     </div>
   );

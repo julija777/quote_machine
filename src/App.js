@@ -4,8 +4,8 @@ import './App.scss';
 
 
 function App() {
-  const [quote, setQuote] = useState("bla bla bla this is a quote")
-  const [author, setAuthor] = useState("Smart Fake Author")
+  const [quote, setQuote] = useState('');
+  const [author, setAuthor] = useState();
 
   const changeQuote = () => {
     fetch("https://api.quotable.io/random")
@@ -15,19 +15,20 @@ function App() {
       setAuthor(data.author)
     })
   }
-  
-
 
   return (
     <div className="App">
       <header className="App-header">
-      <p>
+        <div id="quote-box">
+      <p id="text">
           " {quote} "
         </p>
-        <p>
+        <p id="author">
             - {author}
         </p>
-            <button onClick={() => changeQuote()}>Get Random Quote</button>
+            <button id="new-quote" onClick={() => changeQuote()}>Get Random Quote</button>
+            <a id="tweet-quote" href="https://twitter.com/intent/tweet">Tweet</a>
+        </div>
         </header>
     </div>
   );
